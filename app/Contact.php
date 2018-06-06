@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquen\Relationship\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Contact extends Model
 {
