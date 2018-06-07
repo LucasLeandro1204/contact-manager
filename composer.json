@@ -47,7 +47,9 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
-        ]
+        ],
+        "test": "vendor/bin/phpunit tests/",
+        "coverage": "vendor/bin/phpunit tests/ --coverage-html ./public/coverage"
     },
     "config": {
         "preferred-install": "dist",
