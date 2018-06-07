@@ -21,3 +21,9 @@ Route::prefix('contact')->name('contact.')->middleware('bindings')->group(functi
 
     Route::get('/{contact}/note', 'ContactNoteController@index')->name('note');
 });
+
+Route::prefix('note')->name('note.')->middleware('bindings')->group(function () {
+    Route::post('/', 'NoteController@store')->name('store');
+    Route::put('/{note}', 'NoteController@update')->name('update');
+    Route::delete('/{note}', 'NoteController@destroy')->name('destroy');
+});
