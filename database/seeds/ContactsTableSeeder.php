@@ -1,5 +1,6 @@
 <?php
 
+use App\Note;
 use App\Contact;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +15,7 @@ class ContactsTableSeeder extends Seeder
     {
         factory(Contact::class, 15)->create()
             ->each(function (Contact $contact) {
-                $contact->saveMany(factory(Note::class, rand(0, 3))->make());
+                $contact->notes()->saveMany(factory(Note::class, rand(0, 3))->make());
             });
     }
 }
